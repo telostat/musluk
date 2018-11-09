@@ -1,14 +1,14 @@
 class Demail < Formula
   homepage "https://github.com/vst/demail"
-  url "https://github.com/vst/demail/releases/download/0.0.2/demail-assembly-0.0.2.jar", :using => NoUnzipCurlDownloadStrategy
-  sha256 "98df0165cd52c0c9ebf9e998ab5cd5a49682033844bfdda56dac56c22a8f13e7"
+  url "https://github.com/vst/demail/releases/download/0.0.3/demail-assembly-0.0.3.jar", :using => NoUnzipCurlDownloadStrategy
+  sha256 "2b8cc2907b990878bb9e5ef9a3708bc4b6afe10826abcf98110fc7704a045896"
 
   def install
-    libexec.install "demail-assembly-0.0.2.jar"
+    libexec.install "demail-assembly-0.0.3.jar"
 
     (bin/"demail").write <<~EOS
       #!/bin/sh
-      exec java -jar "#{libexec}/demail-assembly-0.0.2.jar" "$@"
+      exec java -jar "#{libexec}/demail-assembly-0.0.3.jar" "$@"
     EOS
   end
 end
